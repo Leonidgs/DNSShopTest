@@ -17,16 +17,12 @@ public class OpenPsPage extends BasePage{
     @FindBy(xpath = "//select[@class='ui-input-select product-warranty__select']")
     private WebElement guarantee;
 
-    //span[@class='product-card-price__current product-card-price__current_active']
-
     @FindBy(xpath = "//span[@class='product-card-price__current product-card-price__current_active']")
     private WebElement costAfterGuaranty2;
 
     @FindBy(xpath = "//option[@class='ui-input-select__option']")
     private List<WebElement> selectGuarantee;
-    //option[@value='1']
-
-    //button[text()='Купить']
+  
     @FindBy(xpath = "//button[text()='Купить']")
     private WebElement clickBuy;
 
@@ -40,7 +36,6 @@ public class OpenPsPage extends BasePage{
     }
 
     //Кликнуть по полю выбора гарантий
-    //select[@class='ui-input-select product-warranty__select']
     public OpenPsPage clickGuarantee() {
         System.out.println("Стоимость до гарантии " + rememberCost());
         beforeCost = Integer.parseInt(rememberCost());
@@ -64,8 +59,6 @@ public class OpenPsPage extends BasePage{
 
     //Получаем новую цену с гарантией
     public String rememberCostAfterGuarante2() {
-        //System.out.println("Стоимость после выбора гарантии " + costAfterGuaranty2.getText()
-         //       .substring(0,7).replaceAll(" ", ""));
         afterCost = Integer.parseInt(costAfterGuaranty2.getText().substring(0,6).replaceAll(" ", ""));
         return costAfterGuaranty2.getAttribute("textContent");
     }
