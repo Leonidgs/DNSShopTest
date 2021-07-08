@@ -36,7 +36,7 @@ public class ChooseGamePage extends BasePage{
         String c = a.substring(2,5);
         String strokaForAttributeToBe = b + " " + c;
         if (attributeToBe(costBacket, "outerText", strokaForAttributeToBe)) {
-            //System.out.println(totalCost = Integer.parseInt(costBacket.getText().replaceAll(" ", "")));
+            
             return this;
         }
         Assert.fail("Некорректная суммка корзины");
