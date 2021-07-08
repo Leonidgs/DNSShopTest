@@ -14,8 +14,6 @@ public class ListOfConsolesPage extends BasePage {
 
     /**
      * Проверка открытия страницы, путём проверки title страницы
-     *
-     *
      */
     //Проверка попадания на нужную страницу
     public ListOfConsolesPage checkOpenPlayStationsPage() {
