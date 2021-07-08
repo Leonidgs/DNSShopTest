@@ -68,7 +68,6 @@ public class BasketPage extends BasePage{
         list1.add(ChooseGamePage.gameCost);
 
         for (WebElement elem: checkCostProducts) {
-            //System.out.println(elem.getText().substring(0,6).replaceAll(" ", ""));
             list.add(Integer.parseInt(elem.getText().substring(0,6).replaceAll(" ", "")));
         }
         Collections.sort(list);
@@ -76,8 +75,6 @@ public class BasketPage extends BasePage{
         if (list.equals(list1)) {
             return this;
         }
-        //System.out.println(list);
-        //System.out.println(list1);
         Assert.fail("Некорректная стоимость товаров в корзине");
         return this;
     }
